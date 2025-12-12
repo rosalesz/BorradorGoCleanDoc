@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Database } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,11 +36,23 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-12">
           {/* Logo */}
           <div 
-            className="flex-shrink-0 flex items-center gap-2 cursor-pointer" 
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="bg-brand-600 text-white p-1.5 rounded-lg">
-              <Database size={24} />
+            {/* 
+              NOTA: Para usar tu imagen de logo definitiva:
+              1. Guarda tu imagen como 'logo.png' en la carpeta public
+              2. Asegúrate de que la ruta sea correcta
+            */}
+            <div className="relative flex items-center justify-center w-12 h-12">
+                <img 
+                    src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png" 
+                    alt="GoCleanDoc Logo" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                        e.currentTarget.src = "https://via.placeholder.com/48x48.png?text=Logo";
+                    }}
+                />
             </div>
             <span className="font-bold text-xl text-slate-900 tracking-tight">GoCleanDoc</span>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Database, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToUpload = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -26,13 +26,13 @@ const Footer: React.FC = () => {
              <a
               href="#upload"
               onClick={scrollToUpload}
-              className="bg-white text-brand-700 px-8 py-4 rounded-full text-lg font-bold hover:bg-slate-100 transition-colors shadow-lg"
+              className="bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-slate-800 transition-colors shadow-lg border border-transparent"
             >
               Solicitar Diagnóstico Gratis
             </a>
             <a
               href="mailto:contacto@gocleandoc.com"
-              className="bg-brand-700 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-800 transition-colors border border-brand-500"
+              className="bg-transparent text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-700 transition-colors border border-brand-300 hover:border-transparent"
             >
               Consultar Dudas
             </a>
@@ -41,9 +41,13 @@ const Footer: React.FC = () => {
 
         <div className="grid md:grid-cols-4 gap-12 border-t border-slate-800 pt-12">
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="bg-brand-500 p-1.5 rounded-lg">
-                <Database size={20} className="text-white" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-white rounded-lg p-1.5 flex items-center justify-center">
+                 <img 
+                    src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png" 
+                    alt="GoCleanDoc Logo" 
+                    className="w-full h-full object-contain"
+                 />
               </div>
               <span className="font-bold text-xl tracking-tight">GoCleanDoc</span>
             </div>
